@@ -17,6 +17,8 @@ import {
   EyeOff
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import heroGlasses from "./assets/focentra_hero.png";
+import featureGlasses from "./assets/focentra_glasses.png";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -115,7 +117,7 @@ export default function App() {
           <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-30 mix-blend-screen pointer-events-none translate-x-1/4 select-none">
             <img 
               className="w-[800px] h-auto object-contain" 
-              src="/assets/focentra_hero.png" 
+              src={heroGlasses} 
               alt="Focentra Hardware"
               referrerPolicy="no-referrer"
             />
@@ -168,7 +170,7 @@ export default function App() {
               >
                 <div className="relative aspect-video bg-surface-container rounded-2xl overflow-hidden group">
                   <img 
-                    src="/assets/focentra_glasses.png" 
+                    src={featureGlasses} 
                     alt="Deep Focus" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                     referrerPolicy="no-referrer"
