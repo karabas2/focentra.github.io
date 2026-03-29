@@ -78,9 +78,9 @@ export default function App() {
         )}
       </nav>
 
-      <main>
+      <main className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
         {/* Hero Section */}
-        <section id="product" className="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 relative overflow-hidden pt-20">
+        <section id="product" className="min-h-screen snap-start flex flex-col justify-center items-center px-6 md:px-12 relative overflow-hidden">
           <div className="z-10 text-center max-w-5xl">
             <motion.span 
               initial={{ opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ export default function App() {
           <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-30 mix-blend-screen pointer-events-none translate-x-1/4 select-none">
             <img 
               className="w-[800px] h-auto object-contain" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Z5VGIv_tbIMTH8Oa3ykpQgk0fR5bpax4XdXRLuWWS_1tnR4BEwLllmQFRlynOZ8B23sVC59CkZOIEjgtrFeY_OTsebJtvVtWpZtlwN6pWy6GGnP9990i9rK9xLVvS89fmxyIyNfldUCqSGyukBG1ZC-a1jh6h_4v-USv_HemSmGz5dVBr8M45pkAsi9EHr2eI_y6sf9DP7f9N86bybvfvUn2e2q9ky6f9a3VpoWuD4BAMt-nh4_1Q9UzInhZlrMUJ-fLpkT3VIA" 
+              src="/assets/focentra_hero.png" 
               alt="Focentra Hardware"
               referrerPolicy="no-referrer"
             />
@@ -123,7 +123,7 @@ export default function App() {
         </section>
 
         {/* Privacy Section */}
-        <section className="py-32 md:py-48 px-6 md:px-12 bg-surface">
+        <section className="min-h-screen snap-start flex items-center py-20 px-6 md:px-12 bg-surface">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
@@ -157,7 +157,7 @@ export default function App() {
         </section>
 
         {/* Distraction Solution Section (NEW) */}
-        <section id="solution" className="py-32 md:py-48 px-6 md:px-12 bg-black border-y border-white/5">
+        <section id="solution" className="min-h-screen snap-start flex items-center py-20 px-6 md:px-12 bg-black border-y border-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
               <motion.div 
@@ -168,9 +168,9 @@ export default function App() {
               >
                 <div className="relative aspect-video bg-surface-container rounded-2xl overflow-hidden group">
                   <img 
-                    src="https://picsum.photos/seed/focus/1200/800" 
+                    src="/assets/focentra_glasses.png" 
                     alt="Deep Focus" 
-                    className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -219,7 +219,7 @@ export default function App() {
         </section>
 
         {/* Business Section */}
-        <section id="business" className="py-32 md:py-48 px-6 md:px-12 bg-surface-container-lowest">
+        <section id="business" className="min-h-screen snap-start flex items-center py-20 px-6 md:px-12 bg-surface-container-lowest">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-24 items-start">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -269,7 +269,7 @@ export default function App() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-32 md:py-48 px-6 md:px-12 bg-surface">
+        <section id="pricing" className="min-h-screen snap-start flex items-center py-20 px-6 md:px-12 bg-surface">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-32">
               <h2 className="font-headline text-5xl font-bold tracking-tighter mb-4">Master Your Environment.</h2>
@@ -333,7 +333,7 @@ export default function App() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-64 px-6 md:px-12 bg-surface-container-lowest text-center relative overflow-hidden">
+        <section className="min-h-screen snap-start flex items-center justify-center py-20 px-6 md:px-12 bg-surface-container-lowest text-center relative overflow-hidden">
           <div className="z-10 relative">
             <h2 className="font-headline text-[5rem] md:text-[9rem] font-bold tracking-tighter text-white/5 leading-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">FOCENTRA</h2>
             <motion.div 
@@ -350,10 +350,7 @@ export default function App() {
             </motion.div>
           </div>
         </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="w-full border-t border-white/5 bg-black py-12 px-6 md:px-12">
+      <footer className="w-full border-t border-white/5 bg-black py-12 px-6 md:px-12 snap-start">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="font-body text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
             © 2026 FOCENTRA. THE ABSOLUTE MONOLITH.
@@ -365,6 +362,7 @@ export default function App() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </main>
+  </div>
+);
 }
