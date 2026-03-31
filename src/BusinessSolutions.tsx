@@ -136,7 +136,7 @@ export default function BusinessSolutions({ onBack }: BusinessSolutionsProps) {
                 <li className="flex justify-between border-b border-white/5 pb-2"><span>Cognitive Data Vault</span> <span className="text-white">Standard</span></li>
               </ul>
               <button className="w-full bg-secondary text-black py-4 font-headline font-bold uppercase tracking-widest text-xs hover:bg-white transition-colors">
-                BİZİMLE İLETİŞİME GEÇ
+                CONTACT US
               </button>
             </div>
           </div>
