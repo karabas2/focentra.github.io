@@ -135,13 +135,20 @@ export default function App() {
           </div>
 
           {/* Background Asset */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-30 mix-blend-screen pointer-events-none translate-x-1/4 select-none">
+          <div className="absolute right-0 top-0 bottom-0 w-[55%] pointer-events-none select-none overflow-hidden">
             <img
-              className="w-[800px] h-auto object-contain"
+              className="w-full h-full object-cover object-left opacity-40 mix-blend-screen"
               src={heroGlasses}
               alt="Focentra Hardware"
               referrerPolicy="no-referrer"
+              style={{ objectPosition: "20% center" }}
             />
+            {/* fade left */}
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #000000 0%, transparent 40%)" }} />
+            {/* fade top */}
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #000000 0%, transparent 30%)" }} />
+            {/* fade bottom */}
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #000000 0%, transparent 30%)" }} />
           </div>
         </section>
 
@@ -168,14 +175,17 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative bg-surface-container-low p-12 md:p-20 aspect-square flex items-center justify-center border border-white/5"
+              className="relative aspect-square overflow-hidden border border-white/5"
             >
               <img
-                className="w-full h-auto object-contain z-10"
+                className="w-full h-full object-cover object-center"
                 src={privacyGlasses}
                 alt="Optical Processing Unit"
                 referrerPolicy="no-referrer"
               />
+              {/* edge fades */}
+              <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to right, #0e0e0e 0%, transparent 25%, transparent 75%, #0e0e0e 100%)" }} />
+              <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, #0e0e0e 0%, transparent 20%, transparent 80%, #0e0e0e 100%)" }} />
             </motion.div>
           </div>
         </section>
